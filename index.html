@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post to This Is My Jam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-glyphicons.css" rel="stylesheet" media="screen">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <div id="rdio-track"></div>
+
+      <div class="row">
+        <div class="col-6">
+          <p id="authenticate"></p>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/template" id="rdio-track-template">
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <img src="<%= track.icon %>" class="img-responsive">
+        </div>
+        <div class="col-12 col-lg-8">
+          <h1>
+            <a href="http://www.rdio.com<%= track.url %>">
+              <strong><%= track.name %><strong><br>
+              by </em><%= track.artist %></em>
+            </a>
+          </h1>
+          <p id="lead"><a href="<%= url %>" target="_blank" class="btn btn-primary btn-lg">Post to This Is My Jam</a></p>
+        </div>
+      </div>
+    </script>
+
+    <script src="//www.rdio.com/api/api.js?client_id=nX65FBeEr17SC0SHvozPtA"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/json2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/backbone-min.js"></script>
+    <script src="js/rdio-utils.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
